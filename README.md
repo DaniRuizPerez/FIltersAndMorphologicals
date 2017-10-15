@@ -1,11 +1,11 @@
 Filters and morphological operators
 ============
 
-Collection of Matalb algorithms implemented by me that carry out the computer vision operations like the following.
+Collection of Matlab algorithms implemented by me that carry out the computer vision operations like the following.
 This was a project for the Computer Vision course in my senior year of my undergrad in computer science at UDC (Spain).
 
 
-## histStretch
+## Histogram manipulations
 The algorithm compress/stretches the histogram to fit the image into the new values
 
 ```
@@ -13,7 +13,7 @@ function outputImage = histStretch( inputImage , minValue ,maxValue )
 ```
 
 ## Interpolation
-The function makes a 2x zoom to the image, with the nearest neighbourg interpolation and bilinear interpolation.
+The function makes a 2x zoom to the image, with the nearest neighbor interpolation and bilinear interpolation.
 
 ```
 function outputImage = zoomIn2( inputImage ,mode )
@@ -28,7 +28,7 @@ HighBoost algorithm, allowing to customize the size of the filter and the amplif
 function outputImage = highBoost ( inputImage , filterSize , A) 
 ```
 
-MedianFilter algorithm, allowing to stablish the filter size
+MedianFilter algorithm, allowing to establish the filter size
 
 ```
 function outputImage = medianFilter( inputImage , filterSize )
@@ -47,7 +47,7 @@ function outputImage = closing ( inputImage , strElType , strlElSize)
 where ```strElType = 'square' | 'cross'.```
 
 ## Edge detector
-Canny edge detector, allowing to specify hystersis threshold and gaussian smoothing's sigma
+Canny edge detector, allowing to specify hysteresis threshold and Gaussian smoothing's sigma
 ```
 function outputImage = edgeCanny ( inputImage , sigma , tlow , thigh )
 ```
