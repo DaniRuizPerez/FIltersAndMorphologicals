@@ -15,34 +15,49 @@ function outputImage = histStretch( inputImage , minValue ,maxValue )
 ## Interpolation
 The function makes a 2x zoom to the image, with the nearest neighbourg interpolation and bilinear interpolation.
 
-```function outputImage = zoomIn2( inputImage ,mode )```
+```
+function outputImage = zoomIn2( inputImage ,mode )
+```
 
 where ```mode='bilinear' | 'neighbor'```
 
 ## Spacial filtering: Highlighting and Smoothing
 HighBoost algorithm, allowing to customize the size of the filter and the amplification rate.
-```function outputImage = highBoost ( inputImage , filterSize , A) ;
-MedianFilter algorithms, allowing to stablish the filter size
-function outputImage = medianFilter( inputImage , filterSize )```
+
+```
+function outputImage = highBoost ( inputImage , filterSize , A) 
+```
+
+MedianFilter algorithm, allowing to stablish the filter size
+
+```
+function outputImage = medianFilter( inputImage , filterSize )
+```
 
 ## Morphological operators
 The operators erode, dilate, opening and closing are implemented, allowing to configure the type of the structural element and its size.
 
-```function outputImage = erode ( inputImage , strElType , strlElSize )
+```
+function outputImage = erode ( inputImage , strElType , strlElSize )
 function outputImage = dilate ( inputImage , strElType , strlElSize)
 function outputImage = opening ( inputImage , strElType , strlElSize)
-function outputImage = closing ( inputImage , strElType , strlElSize)```
+function outputImage = closing ( inputImage , strElType , strlElSize)
+```
 
 where ```strElType = 'square' | 'cross'.```
 
 ## Edge detector
 Canny edge detector, allowing to specify hystersis threshold and gaussian smoothing's sigma
-```function outputImage = edgeCanny ( inputImage , sigma , tlow , thigh )```
+```
+function outputImage = edgeCanny ( inputImage , sigma , tlow , thigh )
+```
 
 ## Corner detector
 SUSAN corner detector, allowing to specify mask radius and threshold of intensity allowed with respect to the center of the mask
 
-```function outputImage = cornerSusan ( inputImage , r , t )```
+```
+function outputImage = cornerSusan ( inputImage , r , t )
+```
 
 
 ## Tools
